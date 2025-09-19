@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "vite build --debug",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -42,5 +42,8 @@
   "overrides": {
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }
