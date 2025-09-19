@@ -102,11 +102,12 @@
     "@types/react-dom": "^18.2.21",
     "autoprefixer": "^10.4.20",
     "class-variance-authority": "^0.7.1",
+    "react-dom": "^18.3.1",
+    "react-flip-toolkit": "^7.2.4",
     "recharts": "^2.15.1",
     "simplex-noise": "^4.0.3",
-    "typescript": "^5.4.2",
-    "react-flip-toolkit": "^7.2.4",
-    "react-dom": "^18.3.1"
+    "tsup": "^8.5.0",
+    "typescript": "^5.4.2"
   },
   "packageManager": "pnpm@8.3.0+sha512.c114bc6a9fd23f106a6d4333714364a00d2cb8baa4f41a8c96f8bc74cd8546e87050382a54660b7398d0e96c37baa55cfbce3326f376198993582b9b6a858fb5"
 }
