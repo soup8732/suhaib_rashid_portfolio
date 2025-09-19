@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import type { FormEvent } from "react";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, MapPin, Send } from "lucide-react";
 
 export const ContactSection = () => {
   const contactInfo = [
@@ -9,12 +9,6 @@ export const ContactSection = () => {
       title: "Email",
       value: "suhaibrashid@gmail.com",
       href: "mailto:suhaibrashid@gmail.com"
-    },
-    {
-      icon: Phone,
-      title: "Phone",
-      value: "+1 (512) 961-0729",
-      href: "tel:+15129610729"
     },
     {
       icon: MapPin,
