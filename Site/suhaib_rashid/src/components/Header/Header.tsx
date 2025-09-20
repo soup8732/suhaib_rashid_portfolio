@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import type { Variants, MotionProps } from "framer-motion";
-import { Menu, X, Sun, Moon, BookCheckIcon } from "lucide-react";
+import { Menu, X, BookCheckIcon } from "lucide-react";
 import { useLenis } from "lenis/react";
 import { BorderBeam } from "../lightswind/border-beam";
 
@@ -16,23 +16,16 @@ const navItems = [
 ];
 
 export default function Header() {
-  const [theme, setTheme] = useState<string>(() => {
-    return localStorage.getItem("theme") || "light";
-  });
   const [showHeader, setShowHeader] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const lenis = useLenis();
 
-  // Theme toggle
+  // Force dark mode on mount
   useEffect(() => {
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-    localStorage.setItem("theme", theme);
-  }, [theme]);
+    document.documentElement.classList.add("dark");
+    localStorage.setItem("theme", "dark");
+  }, []);
 
   // Scroll listener for hide/show header
   useEffect(() => {
@@ -156,39 +149,8 @@ export default function Header() {
               </ul>
             </nav>
 
-            {/* Theme Toggle Button */}
-            <motion.button
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="p-2 rounded-full text-sm font-semibold
-              hover:bg-pink-400 dark:hover:bg-pink-800 transition-colors
-               hidden md:block"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <AnimatePresence mode="wait" initial={false}>
-                {theme === "dark" ? (
-                  <motion.div
-                    key="moon"
-                    initial={{ y: -20, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    exit={{ y: 20, opacity: 0 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <Moon size={20} className="text-gray-800 dark:text-white" />
-                  </motion.div>
-                ) : (
-                  <motion.div
-                    key="sun"
-                    initial={{ y: 20, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    exit={{ y: -20, opacity: 0 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <Sun size={20} className="text-gray-800 dark:text-white" />
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </motion.button>
+            {/* Spacer to maintain layout */}
+            <div className="w-10 h-10 hidden md:block"></div>
 
             {/* Mobile Menu Button - Hamburger */}
             <button
