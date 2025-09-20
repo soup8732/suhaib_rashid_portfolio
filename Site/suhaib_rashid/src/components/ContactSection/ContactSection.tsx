@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import type { FormEvent } from "react";
 import { Mail, MapPin, Send } from "lucide-react";
+import { AuroraTextEffect } from "../AuroraTextEffect";
 
 export const ContactSection = () => {
   const contactInfo = [
@@ -50,10 +51,18 @@ ${message}`);
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-            Get In Touch
-          </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <AuroraTextEffect
+            text="Get In Touch"
+            fontSize="clamp(2rem, 5vw, 3rem)"
+            className="mb-4"
+            colors={{
+              first: "bg-pink-400",
+              second: "bg-purple-400",
+              third: "bg-blue-400",
+              fourth: "bg-green-400",
+            }}
+          />
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             I'm always interested in hearing about new opportunities, 
             interesting projects, or just want to say hello. Feel free to reach out!
           </p>

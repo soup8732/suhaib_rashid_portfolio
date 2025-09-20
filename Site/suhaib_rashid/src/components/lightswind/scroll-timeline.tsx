@@ -9,6 +9,7 @@ import {
 import { cn } from "../lib/utils";
 import { Card, CardContent } from "./card";
 import { Calendar } from "lucide-react";
+import { AuroraTextEffect } from "../AuroraTextEffect";
 
 export interface TimelineEvent {
   id?: string;
@@ -225,8 +226,18 @@ export const ScrollTimeline = ({
       )}
     >
       <div className="text-center py-16 px-4">
-        <h2 className="text-3xl md:text-5xl font-bold mb-4">{title}</h2>
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+        <AuroraTextEffect
+          text={title}
+          fontSize="clamp(2rem, 5vw, 3rem)"
+          className="mb-4"
+          colors={{
+            first: "bg-indigo-400",
+            second: "bg-purple-400",
+            third: "bg-pink-400",
+            fourth: "bg-cyan-400",
+          }}
+        />
+        <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
           {subtitle}
         </p>
       </div>

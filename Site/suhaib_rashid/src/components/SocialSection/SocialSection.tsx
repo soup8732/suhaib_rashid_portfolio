@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, FileText } from "lucide-react";
 import resumePdf from "@/assets/Suhaib_Rashid_Resume.pdf";
 import CodeHoverCards, { type CardData } from "../CodeHoverCards";
+import { AuroraTextEffect } from "../AuroraTextEffect";
 
 export const SocialSection = () => {
   const socialLinks = [
@@ -52,10 +53,18 @@ export const SocialSection = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-            Let's Connect
-          </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <AuroraTextEffect
+            text="Let's Connect"
+            fontSize="clamp(2rem, 5vw, 3rem)"
+            className="mb-4"
+            colors={{
+              first: "bg-blue-400",
+              second: "bg-purple-400",
+              third: "bg-pink-400",
+              fourth: "bg-cyan-400",
+            }}
+          />
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             I'm always open to new opportunities, collaborations, and interesting conversations. 
             Feel free to reach out through any of these channels.
           </p>

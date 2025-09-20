@@ -1,5 +1,6 @@
 import { Separator } from "../lightswind/separator";
 import { motion } from "framer-motion";
+import { AuroraTextEffect } from "../AuroraTextEffect";
 
 export const AboutSection = () => {
   return (
@@ -11,8 +12,18 @@ export const AboutSection = () => {
       transition={{ duration: 1.8, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.2 }}
     >
-      <h2 className="text-3xl font-bold">About Me</h2>
-      <p className="text-muted-foreground text-sm max-w-3xl">
+      <AuroraTextEffect
+        text="About Me"
+        fontSize="clamp(2rem, 5vw, 3rem)"
+        className="mb-4"
+        colors={{
+          first: "bg-green-400",
+          second: "bg-blue-400",
+          third: "bg-purple-400",
+          fourth: "bg-pink-400",
+        }}
+      />
+      <p className="text-muted-foreground text-base max-w-3xl">
           Hi, I’m Suhaib Rashid, a Management Information Systems graduate from the University of Texas at Austin 
           with a passion for leveraging technology to solve real-world challenges. I have hands-on experience with 
           Python, SQL, cloud platforms, and AI-driven solutions, including developing a GPT-4-based research summarization 

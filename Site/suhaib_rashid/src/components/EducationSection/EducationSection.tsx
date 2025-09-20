@@ -1,6 +1,7 @@
 import { Card, CardHeader, CardTitle, CardContent } from "../lightswind/card";
 import ProfessionalProfile from "./SkillCategory";
 import { motion } from "framer-motion";
+import { AuroraTextEffect } from "../AuroraTextEffect";
 
 export const EducationSection = () => {
   return (
@@ -14,15 +15,24 @@ export const EducationSection = () => {
     >
       {/* Education */}
       <div>
-        <motion.h3
-          className="text-3xl font-bold mb-6"
+        <motion.div
+          className="mb-6"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          Education
-        </motion.h3>
+          <AuroraTextEffect
+            text="Education"
+            fontSize="clamp(2rem, 5vw, 3rem)"
+            colors={{
+              first: "bg-indigo-400",
+              second: "bg-purple-400",
+              third: "bg-blue-400",
+              fourth: "bg-cyan-400",
+            }}
+          />
+        </motion.div>
 
         <motion.div
           className="grid grid-cols-1 md:grid-cols-1 gap-8"
@@ -35,11 +45,11 @@ export const EducationSection = () => {
         <Card>
           <CardHeader>
             <CardTitle>B.B.A. in Management Information Systems</CardTitle>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-base text-muted-foreground">
               The University of Texas at Austin — Aug 2021 – May 2025
             </p>
           </CardHeader>
-          <CardContent className="text-xs text-muted-foreground space-y-2">
+          <CardContent className="text-sm text-muted-foreground space-y-2">
             <p>
               Minor in <strong>Supply Chain Management</strong> | GPA: <strong>3.64</strong>  
               <br />

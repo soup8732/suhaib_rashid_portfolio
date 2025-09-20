@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import resumePdf from "@/assets/Suhaib_Rashid_Resume.pdf";
 import headshotImg from "@/assets/headshot.JPG";
+import { AuroraTextEffect } from "../AuroraTextEffect";
 
 export const HeroSection = () => {
   return (
@@ -23,8 +24,7 @@ export const HeroSection = () => {
         className="flex-1 space-y-4 p-6 text-left md:text-left"
         initial={false} // so it inherits parent animation
       >
-        <motion.h1
-          className="text-4xl font-bold"
+        <motion.div
           initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
           animate={{
             opacity: 1,
@@ -33,7 +33,17 @@ export const HeroSection = () => {
             transition: { duration: 0.8, ease: "easeOut" },
           }}
         >
-          Suhaib Rashid
+          <AuroraTextEffect
+            text="Suhaib Rashid"
+            fontSize="clamp(2.5rem, 6vw, 4rem)"
+            className="mb-2"
+            colors={{
+              first: "bg-pink-400",
+              second: "bg-purple-400",
+              third: "bg-blue-400",
+              fourth: "bg-cyan-400",
+            }}
+          />
           <motion.span
             className="text-sm text-pink-500 font-semibold block"
             initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
@@ -46,7 +56,7 @@ export const HeroSection = () => {
           >
             
           </motion.span>
-        </motion.h1>
+        </motion.div>
 
         <motion.h2
           className="text-xl text-muted-foreground mt-1"
@@ -62,7 +72,7 @@ export const HeroSection = () => {
         </motion.h2>
 
         <motion.p
-          className="mt-4 text-xs text-muted-foreground"
+          className="mt-4 text-sm text-muted-foreground"
           initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
           animate={{
             opacity: 1,
