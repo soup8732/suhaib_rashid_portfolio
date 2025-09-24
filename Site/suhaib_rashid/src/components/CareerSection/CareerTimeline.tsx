@@ -1,5 +1,5 @@
 import { ScrollTimeline } from "../lightswind/scroll-timeline";
-import { Briefcase, Award, Layers, Users, Globe } from "lucide-react";
+import { Briefcase, Award, Layers, Users } from "lucide-react";
 
 export const CareerTimeline = () => {
   const careerEvents = [
@@ -11,14 +11,7 @@ export const CareerTimeline = () => {
         "Spearheaded development of a GPT-4-powered summarization platform, reducing research processing time by 85%. Partnered with the Dean of Research to scale across 200+ faculty publications, coordinating 40+ behavioral studies and 1,500+ survey responses.",
       icon: <Award className="h-4 w-4 mr-2 text-primary" />,
     },
-    {
-      year: "Jan 2025 – May 2025",
-      title: "Solutions Architect (Consulting Project)",
-      subtitle: "The Bakari Foundation",
-      description:
-        "Integrated Salesforce with Flipcause CRM to unify donor data and automate fundraising engagement workflows. Led stakeholder consultations and Agile sprints to deliver functional architecture, custom workflows, and nonprofit-tailored reporting.",
-      icon: <Globe className="h-4 w-4 mr-2 text-primary" />,
-    },
+    
     {
       year: "May 2024 – Aug 2024",
       title: "Supply Chain Analyst Intern",

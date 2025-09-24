@@ -9,43 +9,13 @@ export const ProjectsSection = () => {
   const [projects] = useState([
     {
       id: 1,
-      title: "AI-Powered Design Automation Platform",
+      title: "Solutions Architect (Pro Bono Consulting Project)",
       subtitle:
-        "Developed an AI-driven platform that automates design workflows for global e-commerce brands...",
-      date: "2024",
-      link: "https://example.com/ai-platform",
+        "Integrated Salesforce with Flipcause CRM to unify donor data and automate fundraising engagement workflows. Led stakeholder consultations and Agile sprints to deliver functional architecture, custom workflows, and nonprofit-tailored reporting.",
+      date: "Jan 2025 – May 2025",
+      link: "https://www.thebakarifoundation.org/",
       image:
-        "https://images.pexels.com/photos/8294591/pexels-photo-8294591.jpeg",
-    },
-    {
-      id: 2,
-      title: "Enterprise Resource Planning (ERP) System",
-      subtitle:
-        "Led the development of a modular ERP system for a manufacturing conglomerate...",
-      date: "2023",
-      link: "https://example.com/erp",
-      image:
-        "https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg",
-    },
-    {
-      id: 3,
-      title: "Blockchain-Based Supply Chain Tracker",
-      subtitle:
-        "Created a transparent and tamper-proof supply chain tracking system using Hyperledger Fabric...",
-      date: "2022",
-      link: "https://example.com/supplychain",
-      image:
-        "https://images.pexels.com/photos/6169673/pexels-photo-6169673.jpeg",
-    },
-    {
-      id: 4,
-      title: "Global E-Learning Platform",
-      subtitle:
-        "Designed and implemented a multi-language e-learning platform serving over 1.2 million students...",
-      date: "2021",
-      link: "https://example.com/elearning",
-      image:
-        "https://images.pexels.com/photos/15595050/pexels-photo-15595050.jpeg",
+        "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg",
     },
   ]);
 
